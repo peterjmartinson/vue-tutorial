@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Templates | PJM</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>Interpolations</h2>
+    <span>This will update: {{ msg }}</span>
+    <br>
+    <span v-once>This will not update: {{ msg }}</span>
+    <br>
+    <span>Shows raw HTML:  {{ someHTML }}</span>
+    <br>
+    <span>Shows rendered HTML:  <span v-html="someHTML"></span></span>
+    <br>
+    <span>math:  {{ value01 + value02 }}</span>
+    <br>
+    <span>using Math.sin():  {{ Math.sin(Math.PI/2) }}</span>
+    <br>
+    <span>Is 27 &gt; 73?  <span>{{ value01 > value02 }}</span></span>
+    <br>
+    <span>Is 27 &lt; 73?  <span>{{ value01 < value02 }}</span></span>
+    <br>
+
+    <h2>Directives</h2>
+    <span>Shows if 27 &gt; 73:  <span v-if="value01 > value02">BINGO!</span></span>
+    <br>
+    <span>Shows if 27 &lt; 73:  <span v-if="value01 < value02">BINGO!</span></span>
+  </div>
+  <script src="template.js"></script>
+</body>
+</html>
