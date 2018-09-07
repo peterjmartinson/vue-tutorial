@@ -5,6 +5,6 @@ const App = new Vue({
     msg: 'This is the message',
     someHTML: '<strong>Bold?</strong>',
     value01: 27,
-    value02: 73
+    value02: 73,
   }
 })

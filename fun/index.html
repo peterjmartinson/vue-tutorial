@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Templates | PJM</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="operation">
+      <input v-model:number="add_left" class="left">
+      +
+      <input v-model:number="add_right" class="right">
+      =
+      <span class="result">{{ sum() }}</span>
+    </div>
+    <div class="operation">
+      <input v-model:number="subtract_left" class="left">
+      -
+      <input v-model:number="subtract_right" class="right">
+      =
+      <span class="result">{{ difference() }}</span>
+    </div>
+    <div class="operation">
+      <input v-model:number="multiply_left" class="left">
+      x
+      <input v-model:number="multiply_right" class="right">
+      =
+      <span class="result">{{ product() }}</span>
+    </div>
+    <div class="operation">
+      <input v-model:number="divide_left" class="left">
+      /
+      <input v-model:number="divide_right" class="right">
+      =
+      <span class="result">{{ quotient() }}</span>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
+
