@@ -3,17 +3,44 @@ body {
   color: white;
 }
 
-#select-shape {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  width: 400px;
+#calculate-volumes {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
 }
+
+#calculate-volumes {
+  display: grid;
+  grid-template-columns: auto 500px auto;
+}
+
+#calculate-volumes > div {
+  grid-column-start: 2;
+  place-self: center;
+}
+
+.instructions {
+  grid-row-start: 1;
+}
+
+.input {
+  grid-row-start: 3;
+}
+
+.results {
+  grid-row-start: 4;
+}
+
+.select-shape {
+  grid-row-start: 2;
+  display: grid;
+}
+
 
 #rectangle {
   grid-column-start: 1;
   grid-row-start: 1;
-  place-self: center;
   margin: 16px;
   width: 200px;
   height: 100px;
@@ -75,3 +102,24 @@ body {
 	background-color: rgba(160, 160, 160, 0.4);
 	content: '';
 }
+
+
+
+
+
+/* @media (min-width: 738px) { */
+/* 	#select-shape { */
+/* 		display: grid; */
+/* 		grid-template-columns: 50% 50%; */
+/* 		grid-template-rows: 50% 50%; */
+/* 		width: 400px; */
+/* 	} */
+/* } */
+
+
+
+
+
+
+
+

@@ -7,19 +7,27 @@
 </head>
 <body>
   <section id="calculate-volumes">  
-    <div class="instructions">First Choose Your Tank Type</div>
-    <div id="select-shape">
+    <div class="instructions">
+      <span>First Choose Your Tank Type</span>
+    </div>
+    <div class="select-shape">
       <div id="rectangle">rectangle</div>
       <div id="cylinder">cylinder</div>
       <div id="stadium">stadium</div>
     </div>
-    <div class="instructions">Now Just Enter the Tank Dimensions</div>
-    <form>
-      <div id="volume-form"></div>
-      <button id="calculate" type="button">Calculate Volume</button>
-    </form>
-    <div class="instructions">Volume:</div>
-    <div id="output"></div>
+
+    
+    <div class="input">
+      <span>Now Just Enter the Tank Dimensions</span>
+      <form>
+        <div id="volume-form"></div>
+        <button id="calculate" type="button">Calculate Volume</button>
+      </form>
+    </div>
+    <div class="results">
+      <span>Volume:</span>
+      <div id="output"></div>
+    </div>
   </section>
   </form>
   <script src="grit_calculator.js"></script>
