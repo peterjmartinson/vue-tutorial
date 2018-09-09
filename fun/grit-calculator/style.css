@@ -12,28 +12,31 @@ body {
 
 #calculate-volumes {
   display: grid;
-  grid-template-columns: auto 500px auto;
+  grid-template-columns: auto 400px auto;
 }
 
 #calculate-volumes > div {
-  grid-column-start: 2;
   place-self: center;
 }
 
 .instructions {
   grid-row-start: 1;
+  grid-column-start: 2;
 }
 
 .input {
   grid-row-start: 3;
+  grid-column-start: 2;
 }
 
 .results {
   grid-row-start: 4;
+  grid-column-start: 2;
 }
 
 .select-shape {
   grid-row-start: 2;
+  grid-column-start: 2;
   display: grid;
 }
 
@@ -107,14 +110,29 @@ body {
 
 
 
-/* @media (min-width: 738px) { */
-/* 	#select-shape { */
-/* 		display: grid; */
-/* 		grid-template-columns: 50% 50%; */
-/* 		grid-template-rows: 50% 50%; */
-/* 		width: 400px; */
-/* 	} */
-/* } */
+@media (min-width: 840px) {
+  #calculate-volumes {
+    display: grid;
+    grid-template-columns: auto 400px 400px auto;
+  }
+
+  .instructions {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .input {
+    grid-row-start: 2;
+    grid-column-start: 3
+  }
+
+  .results {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
 
 
 
