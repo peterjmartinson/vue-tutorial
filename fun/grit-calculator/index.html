@@ -4,31 +4,35 @@
   <meta charset="UTF-8">
   <title>Grit Calculator | PJM</title>
   <link rel="stylesheet" href="style.css" media="all">
+  <script src="vue.js"></script>
 </head>
 <body>
-  <section id="calculate-volumes">  
-    <div class="instructions">
-      <span>First Choose Your Tank Type</span>
-    </div>
-    <div class="select-shape">
-      <div id="rectangle">rectangle</div>
-      <div id="cylinder">cylinder</div>
-      <div id="stadium">stadium</div>
-    </div>
+  <div id="app">
+    <section id="calculate-volumes">  
+      <div class="instructions">
+        <span>First Choose Your Tank Type</span>
+      </div>
+      <div class="select-shape">
+        <shape-selector shape="circle"></shape-selector>
+        <div @click="selectShape('rectangle')" id="rectangle">rectangle</div>
+        <div @click="selectShape('cylinder')" id="cylinder">cylinder</div>
+        <div @click="selectShape('stadium')" id="stadium">stadium</div>
+      </div>
 
-    
-    <div class="input">
-      <span>Now Just Enter the Tank Dimensions</span>
-      <form>
-        <div id="volume-form"></div>
-        <button id="calculate" type="button">Calculate Volume</button>
-      </form>
-    </div>
-    <div class="results">
-      <span>Volume:</span>
-      <div id="output"></div>
-    </div>
-  </section>
-  <script src="grit_calculator.js"></script>
+      
+      <div class="input">
+        <span>Now Just Enter the Tank Dimensions</span>
+        <form>
+          <div id="volume-form"></div>
+          <button id="calculate" type="button">Calculate Volume</button>
+        </form>
+      </div>
+      <div class="results">
+        <span>Volume:</span>
+        <div id="output"></div>
+      </div>
+    </section>
+  </div>
+  <script src="vue_grit_calculator.js"></script>
 </body>
 </html>
