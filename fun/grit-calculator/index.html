@@ -13,7 +13,8 @@
         <span>First Choose Your Tank Type</span>
       </div>
       <div class="select-shape">
-        <shape-selector shape="circle"></shape-selector>
+        <shape-selector shape="circle" v-bind:goodies="shapeStyle"></shape-selector>
+        <shape-selector shape="dogbone" v-bind:goodies="shapeStyle"></shape-selector>
         <div @click="selectShape('rectangle')" id="rectangle">rectangle</div>
         <div @click="selectShape('cylinder')" id="cylinder">cylinder</div>
         <div @click="selectShape('stadium')" id="stadium">stadium</div>

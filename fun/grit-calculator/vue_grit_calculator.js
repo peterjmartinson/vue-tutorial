@@ -1,6 +1,11 @@
 Vue.component('shape-selector', {
-  props: ['shape'],
-  template: '<h3 class="test">{{ shape }}</h3>'
+  props: ['shape', 'goodies'],
+  methods: {
+    log: function() {
+      console.log('hey')
+    }
+  },
+  template: '<div style="goodies" v-on:click="log">{{ shape }}</div>'
 })
 
 
@@ -12,11 +17,22 @@ const App = new Vue({
   data: {
     rectangle: '#rectangle',
     cylinder: '#cylinder',
-    stadium: '#stadium'
+    stadium: '#stadium',
+    shapeStyle: {
+      color: 'red'
+    }
   },
   methods: {
-    selectShape(shape) {
+    selectShape: function(shape) {
       console.log(shape);
+    },
+    change: function() {
+      console.log('you clicked the shape!')
+    },
+    resetShapeStyles: function() {
+    },
+    changeColor: function() {
+      this.color = 'green'
     }
   }
 })
