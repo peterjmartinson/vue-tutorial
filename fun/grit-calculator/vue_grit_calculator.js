@@ -5,9 +5,10 @@ Vue.component('shape-selector', {
       console.log('hey')
     }
   },
-  // template: `<div v-bind:style="goodies" v-on:click="log">{{ shape }}</div>`
-  template: `<div v-bind:class="shape" v-on:click="log">{{ shape }}</div>`
+  template: `<div v-bind:class="shape" v-on:click="$emit('make-active')">{{ shape }}</div>`
 })
+// $emit() creates a custom action that you use in the HTML.
+// see in index.html, `v-on:make-active="someMainInstanceFunction"`
 
 
 
@@ -15,37 +16,52 @@ Vue.component('shape-selector', {
 
 const App = new Vue({
   el: '#app',
-  data: {
-    rectangle: '#rectangle',
-    cylinder: '#cylinder',
-    stadium: '#stadium',
-    style_rectangle: {
-      backgroundColor: 'green',
-      color: 'white'
-    },
-    style_cylinder: {
-      backgroundColor: 'blue',
-      color: 'white'
-    },
-    style_stadium: {
-      backgroundColor: 'blue',
-      color: 'white'
-    },
-    state: {
-      active_shape: 'rectangle'
+  data: function() {
+    return {
+      active_shape_color: 'green',
+      passive_shape_color: 'blue',
+      style_rectangle: {
+        backgroundColor: 'green',
+        color: 'white'
+      },
+      style_cylinder: {
+        backgroundColor: 'blue',
+        color: 'white'
+      },
+      style_stadium: {
+        backgroundColor: 'blue',
+        color: 'white'
+      },
+      state: {
+        active_shape: 'rectangle'
+      }
     }
   },
   methods: {
-    selectShape: function(shape) {
-      console.log(shape);
-    },
-    change: function() {
-      console.log('you clicked the shape!')
-    },
-    resetShapeStyles: function() {
-    },
-    changeColor: function() {
-      this.color = 'green'
+    setShapeColor: function(shape) {
+      switch (shape) {
+        case 'rectangle':
+          this.state.active_shape = 'rectangle';
+          this.style_rectangle.backgroundColor = this.active_shape_color;
+          this.style_cylinder.backgroundColor = this.passive_shape_color;
+          this.style_stadium.backgroundColor = this.passive_shape_color;
+          break;
+        case 'cylinder':
+          this.state.active_shape = 'cylinder';
+          this.style_rectangle.backgroundColor = this.passive_shape_color;
+          this.style_cylinder.backgroundColor = this.active_shape_color;
+          this.style_stadium.backgroundColor = this.passive_shape_color;
+          break;
+        case 'stadium':
+          this.state.active_shape = 'stadium';
+          this.style_rectangle.backgroundColor = this.passive_shape_color;
+          this.style_cylinder.backgroundColor = this.passive_shape_color;
+          this.style_stadium.backgroundColor = this.active_shape_color;
+          break;
+        default:
+          break;
+      }
+      console.log("set shape color!");
     }
   }
 })
