@@ -7,8 +7,6 @@ Vue.component('shape-selector', {
   },
   template: `<div v-bind:class="shape" v-on:click="$emit('make-active')">{{ shape }}</div>`
 })
-// $emit() creates a custom action that you use in the HTML.
-// see in index.html, `v-on:make-active="someMainInstanceFunction"`
 
 
 
