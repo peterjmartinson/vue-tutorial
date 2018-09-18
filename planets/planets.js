@@ -11,32 +11,65 @@ new Vue({
     return {
       vue_say: "It's a bound prop!",
       planets: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
-      active_planets: ['Mercury', 'Venus'],
-      active_count: 2,
-      isActive: false
+      can_see: {
+        Mercury: false,
+        Venus: false,
+        Earth: false,
+        Mars: false,
+        Jupiter: false,
+        Saturn: false,
+        Uranus: false,
+        Neptune: false
+      },
+      active_count: 0
     }
   },
   methods: {
     activate: function(planet) {
     },
     pushPlanet: function() {
-      if (this.active_count >= 0 && this.active_count <= this.planets.length) {
-        active_planets.push(planets[active_count]);
-        active_count++;
+      if (this.active_count < this.planets.length) {
+        for (planet in this.can_see) {
+          this.can_see[planet] = false;
+        }
+        this.active_count++;
+        count = 0;
+        for (planet in this.can_see) {
+          if (count === this.active_count) {
+            break;
+          }
+          this.can_see[planet] = true;
+          count++;
+        }
       }
+      console.log(`after: ${this.active_count}`);
     },
     popPlanet: function() {
+      for (planet in this.can_see) {
+        this.can_see[planet] = false;
+      }
+      if (this.active_count > 0) {
+        this.active_count--;
+        count = 0;
+        for (planet in this.can_see) {
+          if (count === this.active_count) {
+            break;
+          }
+          this.can_see[planet] = true;
+          count++;
+        }
+      }
+      console.log(`after: ${this.active_count}`);
     }
   },
   template: '<div>\
-      <div id="add" v-on:click="pushPlanet">ADD</div>\
-      <div id="subtract" v-on:click="popPlanet">SUBTRACT</div>\
+      <button class="control" id="add" v-on:click="pushPlanet">ADD</button>\
+      <button class="control" id="subtract" v-on:click="popPlanet">SUBTRACT</button>\
       <br>\
       <my-component\
         v-for="planet in planets"\
         v-bind:message="planet"\
-        v-bind:class="{ active: isActive }"\
-        v-on:click="activate(planet)"\
+        v-show="can_see[planet]"\
       ></my-component>\
     </div>'
 })
