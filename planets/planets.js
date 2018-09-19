@@ -2,7 +2,7 @@ Vue.component('my-component', {
   props: {
     'message': String
   },
-  template: `<div>{{ message }}</div>`
+  template: `<div></div>`
 })
 
 new Vue({
@@ -12,16 +12,16 @@ new Vue({
       vue_say: "It's a bound prop!",
       planets: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
       can_see: {
-        Mercury: false,
-        Venus: false,
-        Earth: false,
-        Mars: false,
-        Jupiter: false,
-        Saturn: false,
-        Uranus: false,
-        Neptune: false
+        Mercury: true,
+        Venus: true,
+        Earth: true,
+        Mars: true,
+        Jupiter: true,
+        Saturn: true,
+        Uranus: true,
+        Neptune: true
       },
-      active_count: 0
+      active_count: 8
     }
   },
   methods: {
@@ -67,12 +67,14 @@ new Vue({
       <button class="control" id="subtract" v-on:click="popPlanet">SUBTRACT</button>\
       <br>\
       <div class="planet-container">\
-        <my-component\
-          v-for="planet in planets"\
-          v-bind:message="planet"\
-          v-show="can_see[planet]"\
-          v-bind:class="planet"\
-        ></my-component>\
+          <my-component\
+            v-for="planet in planets"\
+            v-bind:message="planet"\
+            v-show="can_see[planet]"\
+            v-bind:class="planet"\
+          ></my-component>\
       </div>\
     </div>'
 })
+        // <div class="planet-center">\
+        // </div>\

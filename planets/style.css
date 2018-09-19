@@ -1,3 +1,10 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
 .control {
   cursor: pointer;
 }
@@ -5,88 +12,96 @@
 .planet-container {
   position: absolute;
   margin-top: 30px;
-  height: 200px;
-  width: 200px;
-  background-color: green;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: black;
+}
+
+.planet-center {
+  position: relative;
+  top: 50vh;
+  left: 50vw;
 }
 
 .Mercury {
   position: absolute;
-  height: 30px;
-  width: 30px;
-  margin: 81px;
+  height: 20vh;
+  width: 20vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 35vw;
+  margin-top: 35vh;
 }
 
 .Venus {
   position: absolute;
-  height: 40px;
-  width: 40px;
-  margin: 76px;
+  height: 30vh;
+  width: 30vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 30vw;
+  margin-top: 30vh;
 }
 
 .Earth {
   position: absolute;
-  height: 50px;
-  width: 50px;
-  margin: 71px;
+  height: 40vh;
+  width: 40vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 25vw;
+  margin-top: 25vh;
 }
 
 .Mars {
   position: absolute;
-  height: 60px;
-  width: 60px;
-  margin: 66px;
+  height: 50vh;
+  width: 50vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 20vw;
+  margin-top: 20vh;
 }
 
 .Jupiter {
   position: absolute;
-  height: 70px;
-  width: 70px;
-  margin: 61px;
+  height: 60vh;
+  width: 60vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 15vw;
+  margin-top: 15vh;
 }
 
 .Saturn {
   position: absolute;
-  height: 80px;
-  width: 80px;
-  margin: 56px;
+  height: 70vh;
+  width: 70vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 10vw;
+  margin-top: 10vh;
 }
 
 .Uranus {
   position: absolute;
-  height: 90px;
-  width: 90px;
-  margin: 51px;
+  height: 80vh;
+  width: 80vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  margin-left: 5vw;
+  margin-top: 5vh;
 }
 
 .Neptune {
   position: absolute;
-  height: 150px;
-  width: 150px;
-  margin: 21px;
+  height: 90vh;
+  width: 90vw;
   border-radius: 50%;
-  /* background-color: red; */
-  border: 4px solid red;
+  border: 4px solid blue;
+  /* margin-left: -45vw; */
+  /* margin-top: -45vh; */
 }
 
