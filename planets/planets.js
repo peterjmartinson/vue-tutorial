@@ -66,10 +66,13 @@ new Vue({
       <button class="control" id="add" v-on:click="pushPlanet">ADD</button>\
       <button class="control" id="subtract" v-on:click="popPlanet">SUBTRACT</button>\
       <br>\
-      <my-component\
-        v-for="planet in planets"\
-        v-bind:message="planet"\
-        v-show="can_see[planet]"\
-      ></my-component>\
+      <div class="planet-container">\
+        <my-component\
+          v-for="planet in planets"\
+          v-bind:message="planet"\
+          v-show="can_see[planet]"\
+          v-bind:class="planet"\
+        ></my-component>\
+      </div>\
     </div>'
 })
