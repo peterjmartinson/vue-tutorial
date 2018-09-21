@@ -25,41 +25,17 @@ new Vue({
     }
   },
   methods: {
-    activate: function(planet) {
-    },
     pushPlanet: function() {
-      if (this.active_count < this.planets.length) {
-        for (planet in this.can_see) {
-          this.can_see[planet] = false;
-        }
-        this.active_count++;
-        count = 0;
-        for (planet in this.can_see) {
-          if (count === this.active_count) {
-            break;
-          }
-          this.can_see[planet] = true;
-          count++;
-        }
+      if (this.active_count >= this.planets.length) {
+        return;
       }
-      console.log(`after: ${this.active_count}`);
+      this.can_see[this.planets[this.active_count++]] = true;
     },
     popPlanet: function() {
-      for (planet in this.can_see) {
-        this.can_see[planet] = false;
+      if (this.active_count <= 0) {
+        return;
       }
-      if (this.active_count > 0) {
-        this.active_count--;
-        count = 0;
-        for (planet in this.can_see) {
-          if (count === this.active_count) {
-            break;
-          }
-          this.can_see[planet] = true;
-          count++;
-        }
-      }
-      console.log(`after: ${this.active_count}`);
+      this.can_see[this.planets[--this.active_count]] = false;
     }
   },
   template: '<div>\
@@ -76,5 +52,3 @@ new Vue({
       </div>\
     </div>'
 })
-        // <div class="planet-center">\
-        // </div>\
