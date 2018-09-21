@@ -9,7 +9,6 @@ new Vue({
   el: '#app',
   data: function() {
     return {
-      vue_say: "It's a bound prop!",
       planets: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
       can_see: {
         Mercury: true,
