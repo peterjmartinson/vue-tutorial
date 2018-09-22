@@ -17,90 +17,66 @@ body {
   bottom: 0px;
   right: 0px;
   left: 0px;
-  background-color: black;
 }
 
-.planet-center {
-  position: relative;
-  top: 50vh;
-  left: 50vw;
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 5px white, inset 0px 0px 10px 5px white;
 }
 
 .Mercury {
-  position: absolute;
   height: 20vh;
   width: 20vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 35vw;
   margin-top: 35vh;
+  left: 40vw;
 }
 
 .Venus {
-  position: absolute;
   height: 30vh;
   width: 30vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 30vw;
   margin-top: 30vh;
+  left: 35vw;
 }
 
 .Earth {
-  position: absolute;
   height: 40vh;
   width: 40vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 25vw;
   margin-top: 25vh;
+  left: 30vw;
 }
 
 .Mars {
-  position: absolute;
   height: 50vh;
   width: 50vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 20vw;
   margin-top: 20vh;
+  left: 25vw;
 }
 
 .Jupiter {
-  position: absolute;
   height: 60vh;
   width: 60vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 15vw;
   margin-top: 15vh;
+  left: 20vw;
 }
 
 .Saturn {
-  position: absolute;
   height: 70vh;
   width: 70vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 10vw;
   margin-top: 10vh;
+  left: 15vw;
 }
 
 .Uranus {
-  position: absolute;
   height: 80vh;
   width: 80vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
-  margin-left: 5vw;
   margin-top: 5vh;
+  left: 10vw;
 }
 
 .Neptune {
-  position: absolute;
   height: 90vh;
   width: 90vw;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 10px 5px blue;
+  left: 5vw;
 }
 

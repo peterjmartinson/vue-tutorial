@@ -2,7 +2,7 @@ Vue.component('my-component', {
   props: {
     'message': String
   },
-  template: `<div></div>`
+  template: `<div class="orbit"></div>`
 })
 
 new Vue({
