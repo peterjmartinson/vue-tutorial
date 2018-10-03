@@ -1,0 +1,82 @@
+body {
+  box-sizing: border-box;
+  background-color: black;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.control {
+  cursor: pointer;
+}
+
+.planet-container {
+  position: absolute;
+  margin-top: 30px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 5px white, inset 0px 0px 10px 5px white;
+}
+
+.Mercury {
+  height: 20vh;
+  width: 20vw;
+  margin-top: 35vh;
+  left: 40vw;
+}
+
+.Venus {
+  height: 30vh;
+  width: 30vw;
+  margin-top: 30vh;
+  left: 35vw;
+}
+
+.Earth {
+  height: 40vh;
+  width: 40vw;
+  margin-top: 25vh;
+  left: 30vw;
+}
+
+.Mars {
+  height: 50vh;
+  width: 50vw;
+  margin-top: 20vh;
+  left: 25vw;
+}
+
+.Jupiter {
+  height: 60vh;
+  width: 60vw;
+  margin-top: 15vh;
+  left: 20vw;
+}
+
+.Saturn {
+  height: 70vh;
+  width: 70vw;
+  margin-top: 10vh;
+  left: 15vw;
+}
+
+.Uranus {
+  height: 80vh;
+  width: 80vw;
+  margin-top: 5vh;
+  left: 10vw;
+}
+
+.Neptune {
+  height: 90vh;
+  width: 90vw;
+  left: 5vw;
+}
+
