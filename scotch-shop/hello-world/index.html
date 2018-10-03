@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <!-- Vue Template -->
+  <div id="app">
+    <div>
+      <input type="text" v-model="name" placeholder="Your name?" />
+      <h5>Hello, {{ name }}</h5>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script>
+    /*Create Vue Instance*/
+    new Vue({
+      template: '#app',
+      data: function() {
+        return {
+          name: ''
+        }
+      }
+    }).$mount('#app');
+  </script>
+</body>
+</html>
